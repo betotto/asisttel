@@ -1,0 +1,47 @@
+{
+  "name": "node-pouchdb",
+  "version": "1.0.0",
+  "description": "Pequeña aplicación para Asisttel",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm-run-all --parallel babel:watch web:compile lint:watch marko:watch web:watch less:watch browserify:watch nodemon",
+    "web:watch": "node_modules/babel-cli/bin/babel.js src-web --out-dir prod-web --presets es2015 --watch",
+    "web:compile": "node_modules/babel-cli/bin/babel.js src-web --out-dir prod-web --presets es2015",
+    "marko:watch": "watch-run -p src/**/*.marko node_modules/marko/bin/markoc src",
+    "babel:compile": "node_modules/babel-cli/bin/babel.js src --out-dir prod --presets es2015",
+    "babel:watch": "node_modules/babel-cli/bin/babel.js src --out-dir prod --presets es2015 --watch",
+    "browserify:watch": "watch-run -p 'prod-web/**/*.js' 'browserify prod-web/index.js --outfile public/assets/app.js'",
+    "nodemon": "nodemon prod/index.js",
+    "less:watch": "watch-run -p less/**/*.less 'lessc less/main.less > public/assets/styles.css'",
+    "lint:watch": "node_modules/.bin/esw --color --watch src tools"
+  },
+  "keywords": [
+    "marko",
+    "pouchdb",
+    "es6"
+  ],
+  "author": "betotto",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/betotto/node-pouchdb/issues"
+  },
+  "homepage": "https://github.com/betotto/node-pouchdb#readme",
+  "dependencies": {
+    "marko": "3.9.4",
+    "pouchdb": "5.4.5"
+  },
+  "devDependencies": {
+    "axios": "^0.13.1",
+    "babel-cli": "6.11.4",
+    "babel-preset-es2015": "6.13.2",
+    "body-parser": "1.15.2",
+    "bootstrap": "^3.3.7",
+    "colors": "1.1.2",
+    "eslint": "3.2.2",
+    "eslint-plugin-import": "1.12.0",
+    "eslint-watch": "2.1.14",
+    "express": "4.14.0",
+    "navigo": "^2.1.2",
+    "npm-run-all": "2.3.0"
+  }
+}
