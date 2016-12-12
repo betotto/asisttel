@@ -1,0 +1,18 @@
+<for (linea in data)>
+	<div class="row">
+		<for (producto in linea)>
+			<div class="col-md-4">
+				<!-- Font awesome icon -->
+				<i class="fa fa-envelope"></i>
+				<!-- Title -->
+				<h5>${producto.titulo}</h5>
+				<!-- Para -->
+				<p>${producto.texto}</p>
+				<!-- Button -->
+				<div class="button">
+					<a href="${producto.enlace}">Check It Out</a>
+				</div>
+			</div>
+		</for>
+	</div>
+</for>

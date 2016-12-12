@@ -20,6 +20,13 @@ var router = new _navigo2.default('#/', true);
 router.on('#/', function () {
 	_pagesLoader2.default.getHome().then(function (response) {
 		document.querySelector('section#contentHome').innerHTML = response.data;
+		$('.flex-image').flexslider({
+			direction: "vertical",
+			controlNav: false,
+			directionNav: true,
+			pauseOnHover: true,
+			slideshowSpeed: 10000
+		});
 	}).catch(function (error) {});
 }).resolve();
 

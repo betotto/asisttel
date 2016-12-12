@@ -1,25 +1,33 @@
 import {get} from 'axios';
 
 const context = './';
-const headerIdioma = 'X-idioma';
 const htmlContentType = 'text/html';
 
 class PagesLoader {
 
 	static getHeader() {
-		return get(context.concat('home/header'), {
-			headers: {
+		return get(context.concat('common/header'), {
+			headers: {
 				Accept: htmlContentType,
-				"X-idioma": window.idioma
+				'X-idioma': idioma
 			}
 		});
 	}
 
 	static getHome() {
 		return get(context.concat('home'), {
-			headers: {
+			headers: {
 				Accept: htmlContentType,
-				"X-idioma": window.idioma
+				'X-idioma': idioma
+			}
+		});
+	}
+
+	static getFooter() {
+		return get(context.concat('common/footer'), {
+			headers: {
+				Accept: htmlContentType,
+				'X-idioma': idioma
 			}
 		});
 	}

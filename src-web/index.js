@@ -3,10 +3,13 @@ import pagesLoader from './api/pagesLoader';
 
 startNav();
 
-window.idioma = 'ingles';
-
 pagesLoader.getHeader().then((response) => {
 	document.querySelector('header').innerHTML = response.data;
+	pagesLoader.getFooter().then((response) => {
+		document.querySelector('footer').innerHTML = response.data;
+	}).catch((error) => {
+
+	});
 }).catch((error) => {
 
 });

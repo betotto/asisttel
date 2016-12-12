@@ -11,7 +11,6 @@ var _axios = require('axios');
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var context = './';
-var headerIdioma = 'X-idioma';
 var htmlContentType = 'text/html';
 
 var PagesLoader = function () {
@@ -22,10 +21,10 @@ var PagesLoader = function () {
 	_createClass(PagesLoader, null, [{
 		key: 'getHeader',
 		value: function getHeader() {
-			return (0, _axios.get)(context.concat('home/header'), {
+			return (0, _axios.get)(context.concat('common/header'), {
 				headers: {
 					Accept: htmlContentType,
-					"X-idioma": window.idioma
+					'X-idioma': idioma
 				}
 			});
 		}
@@ -35,7 +34,17 @@ var PagesLoader = function () {
 			return (0, _axios.get)(context.concat('home'), {
 				headers: {
 					Accept: htmlContentType,
-					"X-idioma": window.idioma
+					'X-idioma': idioma
+				}
+			});
+		}
+	}, {
+		key: 'getFooter',
+		value: function getFooter() {
+			return (0, _axios.get)(context.concat('common/footer'), {
+				headers: {
+					Accept: htmlContentType,
+					'X-idioma': idioma
 				}
 			});
 		}

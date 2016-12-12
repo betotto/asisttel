@@ -1,0 +1,23 @@
+<div class="container newsletter">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="well">
+				<h5>${data.titulo}</h5>
+				<p>${data.texto}</p>
+				<form class="form-inline" role="form">
+					<div class="form-group">
+						<input type="text" class="form-control" id="nombre" placeholder="${data.placeholder.nombre}">
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" id="telefono" placeholder="${data.placeholder.telefono}">
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" id="email" placeholder="${data.placeholder.email}">
+					</div>
+					<button type="submit" class="btn btn-default">${data.placeholder.botonEnviar}</button>
+				</form>
+				<p>${data.saludo}</p>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,3 +1,24 @@
+<script marko-init>
+	var sliderMarko = require('../../common/marko/slider.marko'),
+		productoMarko = require('../../common/marko/productos.marko'),
+		contactoMarko = require('../../common/marko/contactoForm.marko'),
+		capacidadesMarko = require('../../common/marko/capacidades.marko'),
+		marcasMarko = require('../../common/marko/marcas.marko');
+</script>
+
 <div>
- contenido absurdo
+	<include (sliderMarko, data.slider) />
 </div>
+
+<include (capacidadesMarko) />
+
+<div class="service-one">
+	<div class="container">
+		<include (productoMarko, data.productos) />
+	<hr />
+	</div>
+</div>
+
+<include (contactoMarko, data.contactoForm) />
+
+<include (marcasMarko) />

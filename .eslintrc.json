@@ -1,4 +1,7 @@
 {
+	"globals": {
+		"idioma": false
+  },
 	"extends": [
 		"eslint:recommended",
 		"plugin:import/errors",
@@ -62,7 +65,7 @@
 			{ "functions": "always", "keywords": "always" }
 		],
 		"max-len": [
-			"error", 
+			"error",
 			{ "code": 120, "ignoreUrls": true }
 		],
 		"key-spacing": [

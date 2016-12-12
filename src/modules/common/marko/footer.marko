@@ -1,0 +1,57 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="widget">
+						<h5>${data.contacto.titulo}</h5>
+						<hr />
+						<p>
+							${data.contacto.texto} 
+						</p>
+						<for (contacto in data.contacto.lista)>
+							<hr />
+							<i class="fa fa-home"></i>${contacto}
+						</for>
+						<!--div class="social">
+							<a href="#"><i class="fa fa-facebook facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter twitter"></i></a>
+							<a href="#"><i class="fa fa-linkedin linkedin"></i></a>
+							<a href="#"><i class="fa fa-google-plus google-plus"></i></a> 
+						</div-->
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="widget">
+						<h5>${data.acercaNosotros.titulo}</h5>
+						<hr />
+						<p>
+							${data.acercaNosotros.texto}
+						</p>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="widget">
+						<h5>${data.enlaces.titulo}</h5>
+						<hr />
+						<div >
+							<ul>
+								<for (contacto in data.enlaces.lista)>
+									<li><a href="${contacto.ruta}" target="">${contacto.texto}</a></li>
+								</for>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr />
+				<!-- Copyright info -->
+			<p class="copy">
+				Copyright &copy; 2016 Asisttel México
+			</p>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</div>

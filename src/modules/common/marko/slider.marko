@@ -1,0 +1,26 @@
+<div class="container flex-main">
+	<div class="row">
+		<div class="col-md-12">
+					
+			<div class="flex-image flexslider">
+				<ul class="slides">
+							<!-- Each slide should be enclosed inside li tag. -->
+							<!-- Slide #1 -->
+					<for(slidePage in data)>
+						<li>
+							<!-- Image -->
+							<img src=slidePage.image alt=slidePage.imageAlt />
+							<!-- Caption -->
+							<div class="flex-caption">
+								<!-- Title -->
+								<h3>${slidePage.titulo}</h3>
+								<!-- Para -->
+								<p>${slidePage.texto}</p>
+							</div>
+						</li>
+					</for>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

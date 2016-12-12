@@ -11,10 +11,4 @@ router.get('/', (req, res) => {
 	template.render(home[req.get(headerIdioma)], res);
 });
 
-router.get('/header', (req, res) => {
-	let template = HomeController.getHeaderTemplate();
-	res.set('Content-Type', 'text/html');
-	template.render(home[req.get(headerIdioma)], res);
-});
-
 export default router;
